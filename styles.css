@@ -1,0 +1,56 @@
+input{
+    font-family: sans-serif;
+    color: red;
+}
+
+input.person{
+    color: blue;
+}
+
+input#first_name{
+    color: green;}
+
+div {
+    border-bottom: 1px solid grey
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form input {
+    background-color: lightgrey;
+}
+
+form div > input {
+    background-color: lightpink;
+}
+
+label {
+    color: #702080;
+}
+
+.block {
+    border: 1px solid blue;
+    width: 60%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: line-through;
+    font-style: italic;
+    font-family: "Calibri", "Times New Roman";
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.inside {
+    float: right;
+    width: 150px;
+    padding: 20px;
+    background: lightseagreen;
+    margin: 30px;
+    border-radius: 10px;
+}
+
