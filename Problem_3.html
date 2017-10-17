@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 3</title>
+    <style>
+        label{
+            border: 1px solid red;
+            line-height: 20px;
+        }
+        .block{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <p>
+            <input id="1_line" type="checkbox" name="1_line" value="1">
+            <label for="1_line">
+                Это метка для чекбокса: нажмите на меня - чекбокс сменит галочку!
+            </label>
+        </p>
+
+        <p>
+            <input id="2_line" type="checkbox" name="2_line" checked value="1">
+            <label for="2_line">
+                Я отмечен по умолчанию!
+            </label>
+        </p>
+
+        <p>
+            <input id="3_line" type="checkbox" name="3_line" checked disabled value="1">
+            <label for="3_line">
+                Я disabled!
+            </label>
+        </p>
+
+        <div class="block">
+            <p>
+            Это группа радиокнопок - только одна из них может быть отмечена!
+            <p>
+                <input type="radio" id="radio_1" name="radio" value="1">
+                <label for="radio_1">Это метка для радио</label>
+            </p>
+            <p>
+                <input type="radio" id="radio_2" name="radio" value="2">
+                <label for="radio_2">Это метка для радио</label>
+            </p>
+        </div>
+
+        <p>
+            <button type="submit">Отправить на сервер</button>
+        </p>
+
+    </form>
+</body>
+</html>
