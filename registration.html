@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма регистрации</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Каталог<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">Вопросы и ответы</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Поиск">
+                </div>
+                <button type="submit" class="btn btn-default">Найти</button>
+            </form>
+            <p class="navbar-text navbar-right">Звоните: 067 134 45 54</p>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-9 col-lg-6">
+            <p class="h2">Регистрация</p>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-7">
+                        <input type="email"  class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Пароль</label>
+                    <div class="col-sm-7">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Пароль">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" checked> Показать пароль
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="first_name" class="col-sm-2 control-label">Имя</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="first_name" placeholder="Имя">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="last_name" class="col-sm-2 control-label">Фамилия</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" id="last_name" placeholder="Фамилия">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-7">
+                        <button type="submit" class="btn btn-default">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-xs-12 col-md-3 col-lg-6">
+            <p class="h2">Что дает регистрация</p>
+            <div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut autem consequuntur dolor dolore,
+                    illo laboriosam libero maiores maxime molestias nesciunt numquam porro quae quasi, quia quod ratione
+                    saepe suscipit.
+                </div>
+                <div>Ad alias aperiam dicta eaque enim error et, expedita harum in ipsa laborum natus nemo nisi nostrum
+                    numquam odit officiis quam quia quidem ratione repellat repellendus sint sunt ut voluptatum.
+                </div>
+                <div>Accusamus atque blanditiis esse expedita incidunt iusto nostrum obcaecati reiciendis rerum. Aperiam
+                    autem beatae dolores excepturi modi molestiae non nostrum nulla numquam odio quam, quasi quos
+                    reprehenderit, sequi sunt! Eius!
+                </div>
+                <div>Assumenda beatae cumque, deserunt, dolore doloribus ea et excepturi fuga fugiat impedit modi
+                    molestiae nam perferendis quis quisquam ratione reiciendis sint voluptas! Ad aliquam deleniti
+                    doloribus est, odio recusandae veritatis.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+</html>
