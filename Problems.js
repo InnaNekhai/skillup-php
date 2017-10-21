@@ -20,5 +20,6 @@ alert(str1+str2);
 var name="Инна";
 alert("Привет, "+name+"!");
 
+
 var age=27;
 alert("Мне "+age+"лет!");
