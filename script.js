@@ -1,93 +1,56 @@
 'use strict';
 
-var plusButton = document.getElementById('plus'),
-    minusButton = document.getElementById('minus'),
-    op1 = document.getElementById('po1'),
-    op2 = document.getElementById('po2'),
-    result = document.getElementById('result'),
-    buttons = document.getElementsByTagName("button"),
-    i;
+$(document).ready(function(){
 
-function onClick(event){
-    switch (event.target.innerHTML){
-        case '+': result.innerHTML = parseFloat(op1.value) + parseFloat(op2.value); break;
-        case "-": result.innerHTML = parseFloat(op1.value) - parseFloat(op2.value); break;
-        case "*": result.innerHTML = parseFloat(op1.value) * parseFloat(op2.value); break;
-        case "/": result.innerHTML = parseFloat(op1.value) / parseFloat(op2.value); break;
+    var $op1 = $('#op1'),
+        $op2 = $('#op2'),
+        $result = $('#result');
+
+    function onClick(){
+        var op1 = parseFloat($op1.val()),
+            op2 = parseFloat($op2.val());
+
+        switch ($(this).html()){
+            case '+': $result.html(op1 + op2); break;
+            case "-": $result.html(op1 - op2); break;
+            case "*": $result.html(op1 * op2); break;
+            case "/": $result.html(op1 / op2); break;
+        }
     }
-}
 
-for(i = 0; i < buttons.length; i++){
-    buttons[i].onclick = onClick;
-}
+$('button').click(onClick);
 
+$('#slide').click(function(){
+    $('#panel').slideToggle();
+    $(this).toggleClass('active');
+    });
 
+$('#hide').click(function(){
+    var $panel = $('#panel');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*'use strict';
-
-var arr = [3, -4, 50, 34, 8, -20, 20, -12],
-    i,
-    sum = 0;
-
-for (i = 0; i < arr.length; i++){
-    if (arr[i] > 0){
-        sum +=arr[i]
+    if ($panel.is(':visible')){
+        $panel.animate({opacity: "hide"}, "slow");
+    } else {
+        $panel.animate({opacity: "show"}, "slow");
     }
-}
 
-alert(sum);
-*/
+    $(this).toggleClass('active');
+});
+
+    $('#load').click(function(event){
+        event.preventDefault();
+
+        var target = $(this).attr('target'),
+           href = $(this).attr('href');
+
+    //    $(target).load(href);
+
+        $.get(href, function (content){
+            $(target).html(content);
+        });
+
+    });
+
+});
 
 
-/*
-'use strict';
-
-function ask() {
-    var day;
-
-    day = prompt('Какой сегодня день недели (от 1 до 7)?');
-
-    switch (day) {
-        case '1': alert('Выходные закончились'); break;
-        case '2':
-        case '3':
-        case '4': alert('Cегодня на работу'); break;
-        case '5': alert('Скоро выходные'); break;
-        case '6':
-        case '7': alert('Ура, отдыхаем'); break;
-        default:
-            alert('Будь внемитальнее!');
-            ask();
-    }
-}
-
-ask();
-alert('Молодец');
-*/

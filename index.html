@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .expand{
+            display: none;
+        }
+        .active .slide{
+            display: none;
+        }
+        .active .expand{
+            display: inline;
+        }
+    </style>
+
 
 </head>
 <body>
@@ -14,8 +26,25 @@
 <button id="divide">/</button>
 <span id="result">0</span>
 
+<div style="height: 300px">
+<div id="panel" style="height: 300px; background-color: green"></div>
+</div>
+
+<button id="slide">
+    <span class='slide'>Свернуть</span>
+    <span class="expand">развернуть</span>
+</button>
+
+<button id="hide">
+    <span class="slide">Растворить</span>
+    <span class="expand">Показать</span>
+</button>
+
+<a id="load" href="content.html" target="#panel">Загрузить</a>
 
 
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
