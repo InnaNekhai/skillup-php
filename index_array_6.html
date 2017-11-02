@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Задача_6_массивы</title>
 </head>
 <body>
-$END$
+<script>
+    var arr=[1,2,4,8,10,12],
+        newArr=[],
+        elem;
+
+    function filterRange(arr, a, b){
+        for (var i=0; i<=arr.length-1; i++){
+            if ((arr[i]>=a)&&(arr[i]<=b)){
+                newArr.push(arr[i])
+            }
+        }
+        return newArr;
+    }
+    alert(filterRange(arr,2,10 ));
+</script>
 </body>
 </html>

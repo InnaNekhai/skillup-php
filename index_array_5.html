@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Задача_5_массивы</title>
 </head>
 <body>
-$END$
+    <script>
+        var arr=[1,8,2,5,3,4,2,4,5],
+            i;
+
+        function find(arr,value){
+            for (i=0; i<=arr.length-1; i++) {
+                if (arr[i] === value) {
+                    return i;
+                }
+            }
+            return ('-1');
+        }
+
+       alert(find(arr,13));
+
+    </script>
 </body>
 </html>
