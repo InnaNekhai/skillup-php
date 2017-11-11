@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 8</title>
+</head>
+<body>
+<script>
+    // Задание 8. Дан массив товаров, выведите товары на страницу цены которых больше 20
+
+    var goods = {
+        "dd" : {
+            "name": "Яблоки",
+            "cost": 13
+        },
+        "dc" : {
+            "name": "Груши",
+            "cost": 23
+        },
+        "cd" : {
+            "name": "Абрикосы",
+            "cost": 33
+        },
+        "dee" : {
+            "name": "Сливы",
+            "cost": 43
+        },
+        "dd2" : {
+            "name": "Вишни",
+            "cost": 19
+        },
+    };
+
+     for(var key in goods){
+        if (goods[key]["cost"]>20){
+            for (var key2 in goods[key]){
+                document.write (key2 + ': ' + goods[key][key2] + '<br>');
+            }
+            document.write('<p>');
+        }
+     }
+
+</script>
+</body>
+</html>
