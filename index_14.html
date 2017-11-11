@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 5</title>
+</head>
+<body>
+<script>
+    //Задание 5. Дан ассоциативный массив. Выведите его на страницу html в формате ключ — значение. Каждый элемент с новой строки.
+
+    var day = {
+        "d1" : "Понедельник",
+        "d2" : "Вторник",
+        "d3" : "Среда",
+        "d4" : "Четверг"
+    };
+
+    for (var key in day){
+        document.write(key + ": " + day[key]+'<br>');
+    }
+
+</script>
+</body>
+</html>
