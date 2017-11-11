@@ -11,31 +11,48 @@
 Выведите массив в консоль. Выведите на страницу HTML описание первого товара.*/
 
     var arr={
-        '45138':{
-            'Название товара' : "Сыр Радомер ",
+        "45138":{
+            "Название товара" : "Сыр Радомер ",
             "Стоимость, грн" : 80,
             "Вес единицы товара, грамм" : 250,
-            "Ссылка на изображение" : '<a href="http://cdn.vkusnoblog.net/sites/default/files/syr-bri-2.jpg">изображение товара</a>',
-            "Отметка о доступности товара на складе" : 'есть в наличии',
+            "Ссылка на изображение" : '<a href="http://receptov.net/uploads/posts/2015-03/1426088163_radomer.jpg">изображение товара</a>',
+            "Отметка о доступности товара на складе" : "есть в наличии",
             },
-        },
-        '45139':{
-            'Название товара' : "Сыр Бри",
+        "45139":{
+            "Название товара" : "Сыр Бри",
             "Стоимость, грн" : 120,
             "Вес единицы товара, грамм" : 200,
             "Ссылка на изображение" : '<a href="http://cdn.vkusnoblog.net/sites/default/files/syr-bri-2.jpg">изображение товара</a>',
             "Отметка о доступности товара на складе" :  'нет в наличии',
         },
-        '45138':{
-            'Название товара' : "Сыр Рокфор",
+        "45140":{
+            "Название товара" : "Сыр Рокфор",
             "Стоимость, грн" : 130,
             "Вес единицы товара, грамм" : 100,
-            "Ссылка на изображение" : '<a href="https://lh4.googleusercontent.com/UDPiMFXQrft7K9anL-9dk_12HEmLrGb0qJBjjcUTm9p8a9OAh9T1nCsxLhiWE38wqinimIwkymvUM99ksegF7siV4bqm16xA49vV9FsfXNtYqR7GiyNHBLGhcFssj-DBFEMbuIef">изображение товара</a>'
-            "Отметка о доступности товара на складе" : 'есть в наличии',
+            "Ссылка на изображение" : '<a href="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/cheese-6.jpg">изображение товара</a>',
+            "Отметка о доступности товара на складе" : "есть в наличии",
         },
     };
 
 console.log(arr);
+
+//все товары:
+for (var key1 in arr){
+    document.write('Артикул: ' + [key1] + '<br>');
+    for (var key2 in arr[key1]){
+        document.write([key2] + ': ' +arr[key1][key2]+'<br>');
+    }
+    document.write('<br>');
+}
+
+//Только первый товар:
+    document.write('Артикул: ' + "45138" + '<br>');
+    for (var key3 in arr["45138"]){
+        document.write([key3] + ': ' +arr["45138"][key3]+'<br>');
+    }
+    document.write('<br>');
+
+
 
 </script>
 </body>
