@@ -41,13 +41,13 @@
 
     <?php foreach ($data as $key=>$elem){?>
         <tr>
-        <td><?php print_r ($key+ 1);?></td>
-        <?php foreach ($elem as $key2=>$elem1 ){?>
-            <?php if ($key2<=3){ ?>
-        <td><?php print_r($elem1 .PHP_EOL); ?></td>
+            <td><?php print_r ($key+ 1);?></td>
+            <?php foreach ($elem as $key2=>$elem1 ){?>
+                <?php if ($key2<=3){ ?>
+            <td><?php print_r($elem1 .PHP_EOL); ?></td>
+                <?php } ?>
             <?php } ?>
-        <?php } ?>
-    </tr>
+        </tr>
     <?php } ?>
 
 </table>
