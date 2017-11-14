@@ -9,22 +9,7 @@ function processRequest(array $user){
     return $user;
 }
 
-function validateUser(array $user){
-    $errors=[];
 
-    if(!$user['confirm']){
-        $errors[] = 'Вы должны согласиться!';
-    }
-
-    if(!$user['email']){
-        $errors[] = 'Введите email';
-    }
-
-    if ($user['phone'] && !is_numeric($user['phone'])){
-        $errors[] = 'В номере телефона допускаются только цифры';
-    }
-    return $errors;
-}
 
 function saveUser(array $user) {
     if (file_exists(USERS_FILE)){
@@ -38,9 +23,9 @@ function saveUser(array $user) {
     file_put_contents(USERS_FILE, $existing_users);
 }
 
-function saveUser2(array $user) {
+function saveUser2(User $user) {
     $file = fopen(USERS_FILE, 'a');
-    $user_info = implode("\t", $user) .PHP_EOL;
+    $user_info = $user .PHP_EOL;
     fputs($file, $user_info);
     fclose($file);
 

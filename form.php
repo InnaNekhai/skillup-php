@@ -1,6 +1,7 @@
 <?php
 /**
- * @var array $user
+ * @var User $user
+ *
  */
 ?>
 
@@ -26,12 +27,12 @@
 <?php } ?>
 
     <form action="index.php" method="post">
-        <label>Имя <input name="first_name" value="<?=$user['first_name']?>"></label>
-        <label>Фамилия <input name="last_name" value="<?=$user['last_name']?>"></label>
-        <label>Email <input name="email" value="<?=$user['email']?>"></label>
-        <label>Телефон <input name="phone" value="<?=$user['phone']?>"></label>
+        <label>Имя <input name="firstName" value="<?= $user->firstName ?>"></label>
+        <label>Фамилия <input name="lastName" value="<?=$user-> lastName ?>"></label>
+        <label>Email <input name="email" value="<?=$user->email ?>"></label>
+        <label>Телефон <input name="phone" value="<?=$user->phone ?>"></label>
         <label>
-            <input type="checkbox" name="confirm" <?=$user['confirm']? 'checked': ''?>>Я согласен с правилами сайта
+            <input type="checkbox" name="confirm" <?=$user->confirm ? 'checked': ''?>>Я согласен с правилами сайта
         </label>
         <button type="submit">Зарегистрироваться</button>
     </form>
