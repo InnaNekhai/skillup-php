@@ -10,7 +10,7 @@ class Worker
 {
     private $name;
     private $salary;
-    private $age; //я так понимаю, просто в условии напутано и дальше требуются все эти св-ва
+    private $age; //я так понимаю, просто в условии напутано и дальше требуются все эти поля
 
     public function __construct($name, $age, $salary)
     {
