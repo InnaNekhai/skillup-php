@@ -22,10 +22,10 @@
     </style>
 </head>
 <body>
-    <form action="Task14.php" method="post">
+    <form action="__Task14.php" method="post">
         <label>
             <p>Введите дату в формате "2025-12-31"</p>
-            <input type="text" name="date" value="<?=$date?>">
+            <input type="text" name="date" placeholder="2025-12-31" value="<?=$date?>">
         </label>
         <label>
             <button type="submit">Отправить</button>

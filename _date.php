@@ -41,9 +41,7 @@ echo $week[$num] .'<p>';
 $num = date('N', mktime(0,0,0,10,13,1990));
 echo $week[$num];
 
-//14  Сделайте форму, которая спрашивает дату в формате '2025-12-31'. С помощью функций mktime и explode переведите эту дату в формат timestamp. Узнайте месяц (словом) за введенную дату.
-?>
+echo  strtotime('+1 month');
 
-<label>
-    <input type="text" name="date"
-</label>
+setcookie('blockBanner', 'blocked',  strtotime('+1 month'));
+echo $_COOKIE['blockBanner'];
