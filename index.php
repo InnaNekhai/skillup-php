@@ -1,13 +1,12 @@
 <?php
+include 'Worker.php';
 
-include 'init.php';
+$pdo = new PDO('mysql:host=localhost;dbname=skillup;charset=utf8','root','');
 
-setcookie('user', '', time()+3*3600);
+$sql='SELECT * FROM workers WHERE salary=:salary';
+$result = $pdo->prepare($sql);
+$result->execute(['salary'=>500]);
 
-?>
-
-<a href="readcookie.php">Узнать значение cookie</a>
-
-<a href="logout.php">Выйти</a>
-
-
+while ($row = $result->fetchObject(Worker::class)){
+    var_dump($row);
+}
