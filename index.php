@@ -98,10 +98,12 @@ while ($row = $result->fetchObject(Worker::class)) {
 
 /*  7. Выбрать работников с зарплатой равной или меньшей 900$. Показать решение.*/
 echo '<b><i>Задача 7:</i></b>' .'<p>' ;
-$sql='SELECT * FROM workers WHERE salary<=900';
-$result = $pdo->query($sql);
 
-while ($row = $result->fetch()) {
+$sql='SELECT * FROM workers WHERE salary<=:salary';
+$result = $pdo->prepare($sql);
+$result->execute(['salary'=>900]);
+
+while ($row = $result->fetchObject(Worker::class)) {
     foreach ($row as $field=>$value){
         echo $field .'-' .$value .'|';
     }
@@ -111,11 +113,32 @@ while ($row = $result->fetch()) {
 
 /* 8.  Узнайте зарплату и возраст Васи. Показать решение.*/
 echo '<b><i>Задача 8:</i></b>' .'<p>' ;
-// $sql="SELECT salary, age FROM workers WHERE name = 'Вася'";
+$sql="SELECT salary, age FROM workers WHERE name=:name";
+$result = $pdo->prepare($sql);
+$result->execute(['name'=>'Вася']);
+
+while ($row = $result->fetchObject(Worker::class)) {
+    foreach ($row as $field=>$value){
+        echo $field .'-' .$value .'|';
+    }
+    echo '<p>';
+}
 
 //* 9. 	Выбрать работников в возрасте от 25 (не включительно) до 28 лет (включительно).
 echo '<b><i>Задача 9:</i></b>' .'<p>' ;
-$sql='SELECT * FROM workers WHERE age>25 AND age<=28';
+$sql="SELECT * FROM workers WHERE :age>25 AND :age<=28";
+$result = $pdo->prepare($sql);
+$result->execute(['name'=>'Вася']);
+
+while ($row = $result->fetchObject(Worker::class)) {
+    foreach ($row as $field=>$value){
+        echo $field .'-' .$value .'|';
+    }
+    echo '<p>';
+
+
+
+/*$sql='SELECT * FROM workers WHERE age>25 AND age<=28';
 $result = $pdo->query($sql);
 
 while ($row = $result->fetch()) {
@@ -123,7 +146,7 @@ while ($row = $result->fetch()) {
         echo $field .'-' .$value .'|';
     }
     echo '<p>';
-}
+}*/
 
  // 10. Выбрать работника Петю. Показать решение.
 
