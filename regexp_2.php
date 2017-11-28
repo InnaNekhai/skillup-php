@@ -98,6 +98,11 @@ echo '17: ' .preg_replace('/w[а-яё]w/u' , '-', 'wйw wяw wёw wqw') .'<p>';
 
 echo '18: ' .preg_replace('/a[a-z]+a/', '-', 'aAXa aeffa aGha aza ax23a a3sSa') .'<p>';
 
+/* 19.Дана строка 'aAXa aeffa aGha aza ax23a a3sSa'. Напишите регулярку, которая найдет строки следующего вида:
+по краям стоят буквы 'a', а между ними - маленькие и большие латинские буквы, не затронув остальных*/
+
+echo '19: ' .preg_replace('/a[a-zA-Z]+a/', '-', 'aAXa aeffa aGha aza ax23a a3sSa') .'<p>';
+
 
 
 
