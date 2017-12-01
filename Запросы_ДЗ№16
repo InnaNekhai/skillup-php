@@ -1,0 +1,19 @@
+SELECT o.order_id 'заказ', u.name 'пользователь'
+FROM orders o
+JOIN users u ON u.users_id = o.users_id
+WHERE o.status=0
+
+
+SELECT u.name 'пользователь', o.status 'статус заказа', COUNT(o.order_id=0) 'кол-во невыполненных заказов'
+FROM orders o
+JOIN users u ON u.users_id = o.users_id
+WHERE o.status=0
+GROUP BY u.name
+  
+  
+SELECT u.users_id, u.name 'пользователь', COUNT(o.order_id) 'кол-во заказов'
+FROM users u
+JOIN orders o ON u.users_id = o.users_id
+WHERE o.status=1
+GROUP BY u.name
+HAVING COUNT(o.order_id)>3
